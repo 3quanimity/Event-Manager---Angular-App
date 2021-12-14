@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
     <div>
       <h1>Upcoming Angular Events</h1>
       <hr />
-      <event-thumbnail [event]="event1" #thumbnail></event-thumbnail>
-      <h3>{{thumbnail.someProperty}}</h3>
-      <button (click)="thumbnail.logFoo()">Call a method from a child component</button>
+      <event-thumbnail [event]="event1"></event-thumbnail>
     </div>
   `,
 })
