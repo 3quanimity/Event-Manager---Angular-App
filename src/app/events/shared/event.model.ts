@@ -15,7 +15,7 @@ export interface IEvent {
 }
 
 export interface ISession {
-  id: number;
+  id: number | undefined;
   name: string;
   presenter: string;
   duration: number;
