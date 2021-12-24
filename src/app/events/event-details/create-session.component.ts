@@ -41,7 +41,7 @@ export class CreateSessionComponent implements OnInit {
   presenter: FormControl | undefined;
   duration: FormControl | undefined;
   level: FormControl | undefined;
-  abstract: FormControl | undefined;
+  abstract!: FormControl;
 
   ngOnInit(): void {
     this.name = new FormControl('', Validators.required);
