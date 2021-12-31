@@ -55,6 +55,11 @@ declare let toastr: Toastr; // for typescript to recognise toastr as a variable
       useValue: toastr
     },
     EventRouteActivatorService,
+    // the following is the same as the above, but with longhand syntax, (useClass)
+    // {
+    //   provide: EventRouteActivatorService,
+    //   useClass: EventRouteActivatorService
+    // },
     EventListResolver,
     {
       provide: 'canDeactivateCreateEvent',
