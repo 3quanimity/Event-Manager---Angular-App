@@ -21,10 +21,12 @@ import { NavBarComponent } from './nav/navbar.component';
 import { Error404Component } from './errors/404.component';
 import { CollapasibleWellComponent } from './common/collapsible-well.component';
 
-import { ToastrService } from './common/toastr.service';
+import { Toastr, TOASTR_TOKEN } from './common/toastr.service';
 import { AuthService } from './user/auth.service';
 
 import { appRoutes } from './routes';
+
+declare let toastr: Toastr; // for typescript to recognise toastr as a variable
 
 @NgModule({
   imports: [
@@ -48,7 +50,10 @@ import { appRoutes } from './routes';
   ],
   providers: [
     EventService, // short hand for { provide: EventService, useClass: EventService }
-    ToastrService,
+    {
+      provide: TOASTR_TOKEN,
+      useValue: toastr
+    },
     EventRouteActivatorService,
     EventListResolver,
     {
